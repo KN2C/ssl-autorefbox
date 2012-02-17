@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = ../bin/ssl-refbox
+TARGET = ../bin/ssl-autonomous-refbox
 CONFIG += qt \
  debug \
  console \
@@ -8,7 +8,7 @@ CONFIG += qt \
  link_pkgconfig
 PKGCONFIG += swipl
 DEPENDPATH += ../libbsmart ../proto ../ConfigFile
-INCLUDEPATH += ../
+INCLUDEPATH += ../ /usr/lib/swi-prolog/include/
 LIBS += -lprotobuf -lglut -llog4cxx
 QMAKE_LINK = swipl-ld ssl_refbox_rules_prolog.pl
 HEADERS += glextra.h \
